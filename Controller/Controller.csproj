@@ -46,5 +46,18 @@
     <Compile Include="ControllerUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{5258ea52-db71-4801-ba4e-bf099a60d646}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Identities\Identities.csproj">
+      <Project>{5588b688-4100-41a8-8246-6b0ac105850d}</Project>
+      <Name>Identities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

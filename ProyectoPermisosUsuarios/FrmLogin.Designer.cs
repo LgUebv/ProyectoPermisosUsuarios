@@ -53,6 +53,7 @@
             this.button1.TabIndex = 34;
             this.button1.Text = "Ingresar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtPassword
             // 
@@ -127,11 +128,12 @@
             this.lblExit.AutoSize = true;
             this.lblExit.Font = new System.Drawing.Font("MS Reference Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExit.ForeColor = System.Drawing.Color.Red;
-            this.lblExit.Location = new System.Drawing.Point(521, -25);
+            this.lblExit.Location = new System.Drawing.Point(508, -4);
             this.lblExit.Name = "lblExit";
             this.lblExit.Size = new System.Drawing.Size(31, 34);
             this.lblExit.TabIndex = 27;
             this.lblExit.Text = "x";
+            this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
             // 
             // FrmLogin
             // 

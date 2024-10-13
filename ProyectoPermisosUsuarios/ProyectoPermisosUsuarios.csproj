@@ -146,5 +146,11 @@
   <ItemGroup>
     <None Include="Resources\IconoLogin-removebg-preview.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controller\Controller.csproj">
+      <Project>{0c40f00a-2082-495d-9c9f-89ca851aa695}</Project>
+      <Name>Controller</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
