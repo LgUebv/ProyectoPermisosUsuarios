@@ -77,7 +77,7 @@
             this.Eliminacion,
             this.Actualizar});
             this.dtgvPermisos.Location = new System.Drawing.Point(11, 319);
-            this.dtgvPermisos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtgvPermisos.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvPermisos.Name = "dtgvPermisos";
             this.dtgvPermisos.RowTemplate.Height = 24;
             this.dtgvPermisos.Size = new System.Drawing.Size(931, 138);
@@ -127,7 +127,7 @@
             // 
             this.txtUsername.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(11, 93);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(232, 27);
             this.txtUsername.TabIndex = 49;
@@ -137,7 +137,7 @@
             this.dtpFechaNac.CustomFormat = "YYYY-MM-DD";
             this.dtpFechaNac.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaNac.Location = new System.Drawing.Point(10, 239);
-            this.dtpFechaNac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpFechaNac.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaNac.Name = "dtpFechaNac";
             this.dtpFechaNac.Size = new System.Drawing.Size(230, 27);
             this.dtpFechaNac.TabIndex = 47;
@@ -148,7 +148,7 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Location = new System.Drawing.Point(571, 465);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(169, 51);
             this.btnAceptar.TabIndex = 46;
@@ -162,7 +162,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(276, 465);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(169, 51);
             this.btnCancelar.TabIndex = 45;
@@ -174,7 +174,7 @@
             // 
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(374, 93);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(232, 27);
             this.txtPassword.TabIndex = 44;
@@ -183,7 +183,7 @@
             // 
             this.txtRFC.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRFC.Location = new System.Drawing.Point(374, 241);
-            this.txtRFC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRFC.Margin = new System.Windows.Forms.Padding(2);
             this.txtRFC.Name = "txtRFC";
             this.txtRFC.Size = new System.Drawing.Size(232, 27);
             this.txtRFC.TabIndex = 43;
@@ -192,7 +192,7 @@
             // 
             this.txtApellidoM.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidoM.Location = new System.Drawing.Point(710, 166);
-            this.txtApellidoM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellidoM.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellidoM.Name = "txtApellidoM";
             this.txtApellidoM.Size = new System.Drawing.Size(232, 27);
             this.txtApellidoM.TabIndex = 42;
@@ -201,7 +201,7 @@
             // 
             this.txtApellidoP.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidoP.Location = new System.Drawing.Point(374, 166);
-            this.txtApellidoP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtApellidoP.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellidoP.Name = "txtApellidoP";
             this.txtApellidoP.Size = new System.Drawing.Size(232, 27);
             this.txtApellidoP.TabIndex = 41;
@@ -210,7 +210,7 @@
             // 
             this.txtNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(10, 166);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(232, 27);
             this.txtNombre.TabIndex = 40;
@@ -329,6 +329,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAddUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAddUsuario";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvPermisos)).EndInit();
             this.ResumeLayout(false);

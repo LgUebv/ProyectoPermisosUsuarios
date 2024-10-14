@@ -140,6 +140,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmProducto";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvProductos)).EndInit();
             this.ResumeLayout(false);

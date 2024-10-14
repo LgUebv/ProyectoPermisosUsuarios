@@ -140,6 +140,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmHerramientas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmHerramientas";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvHerramientas)).EndInit();
             this.ResumeLayout(false);

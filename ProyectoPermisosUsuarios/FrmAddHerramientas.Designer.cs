@@ -47,7 +47,7 @@
             // 
             this.txtCodigoBarras.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCodigoBarras.Location = new System.Drawing.Point(12, 79);
-            this.txtCodigoBarras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigoBarras.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodigoBarras.Name = "txtCodigoBarras";
             this.txtCodigoBarras.Size = new System.Drawing.Size(262, 27);
             this.txtCodigoBarras.TabIndex = 61;
@@ -67,7 +67,7 @@
             // 
             this.txtMarcaHerramienta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMarcaHerramienta.Location = new System.Drawing.Point(12, 284);
-            this.txtMarcaHerramienta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMarcaHerramienta.Margin = new System.Windows.Forms.Padding(2);
             this.txtMarcaHerramienta.Name = "txtMarcaHerramienta";
             this.txtMarcaHerramienta.Size = new System.Drawing.Size(262, 27);
             this.txtMarcaHerramienta.TabIndex = 59;
@@ -89,7 +89,7 @@
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Location = new System.Drawing.Point(326, 338);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(169, 51);
             this.btnAceptar.TabIndex = 57;
@@ -103,7 +103,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(105, 338);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(169, 51);
             this.btnCancelar.TabIndex = 56;
@@ -115,7 +115,7 @@
             // 
             this.txtMedidaHerramienta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMedidaHerramienta.Location = new System.Drawing.Point(13, 212);
-            this.txtMedidaHerramienta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMedidaHerramienta.Margin = new System.Windows.Forms.Padding(2);
             this.txtMedidaHerramienta.Name = "txtMedidaHerramienta";
             this.txtMedidaHerramienta.Size = new System.Drawing.Size(261, 27);
             this.txtMedidaHerramienta.TabIndex = 55;
@@ -124,7 +124,7 @@
             // 
             this.txtDescripcionHerramienta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescripcionHerramienta.Location = new System.Drawing.Point(326, 97);
-            this.txtDescripcionHerramienta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescripcionHerramienta.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcionHerramienta.Multiline = true;
             this.txtDescripcionHerramienta.Name = "txtDescripcionHerramienta";
             this.txtDescripcionHerramienta.Size = new System.Drawing.Size(302, 214);
@@ -134,7 +134,7 @@
             // 
             this.txtNombreHerramienta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreHerramienta.Location = new System.Drawing.Point(13, 144);
-            this.txtNombreHerramienta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombreHerramienta.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombreHerramienta.Name = "txtNombreHerramienta";
             this.txtNombreHerramienta.Size = new System.Drawing.Size(261, 27);
             this.txtNombreHerramienta.TabIndex = 53;
@@ -203,6 +203,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAddHerramientas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAddHerramientas";
             this.ResumeLayout(false);
             this.PerformLayout();

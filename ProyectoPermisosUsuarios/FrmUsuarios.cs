@@ -42,11 +42,10 @@ namespace ProyectoPermisosUsuarios
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            // Verifica que se haya seleccionado una fila
             if (!string.IsNullOrEmpty(username))
             {
                 FrmAddUsuario formulario = new FrmAddUsuario();
-                formulario.SetData(username, password, nombre, apellidoP, apellidoM, fechaNac, rfc); // Método que debes crear en el formulario
+                formulario.SetData(username, password, nombre, apellidoP, apellidoM, fechaNac, rfc);
                 formulario.ShowDialog();
             }
             else
@@ -57,13 +56,10 @@ namespace ProyectoPermisosUsuarios
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            // Asegúrate de que hay una fila seleccionada
             if (dtgvUsuarios.SelectedRows.Count > 0)
             {
-                // Obtén el username de la fila seleccionada (ajusta el índice según tu DataGridView)
                 string usernameSeleccionado = dtgvUsuarios.SelectedRows[0].Cells["Username"].Value.ToString();
 
-                // Llama al método Borrar del manejador
                 Cu.Borrar(usernameSeleccionado);
             }
             else
@@ -74,29 +70,58 @@ namespace ProyectoPermisosUsuarios
 
         private void dtgvUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // Asegúrate de que la fila es válida
+            if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dtgvUsuarios.Rows[e.RowIndex];
 
-                // Almacena los datos de la fila seleccionada en las variables
                 username = row.Cells["Username"].Value.ToString();
-                password = row.Cells["password"].Value.ToString(); // Asegúrate de que este valor sea seguro
+                password = row.Cells["password"].Value.ToString();
                 nombre = row.Cells["nombre"].Value.ToString();
                 apellidoP = row.Cells["apellidoP"].Value.ToString();
                 apellidoM = row.Cells["apellidoM"].Value.ToString();
                 fechaNac = Convert.ToDateTime(row.Cells["fechanacimiento"].Value).ToString("yyyy-MM-dd");
                 rfc = row.Cells["rfc"].Value.ToString();
 
-                // Cambia el color de la fila seleccionada (opcional)
-                row.Selected = true; // Esto selecciona la fila visualmente
+                row.Selected = true;
             }
         }
 
         public void VerificarPermisos()
         {
-            btnAdd.Visible = IdentitiesPermisos.Usuarios_Escritura;
-            btnDel.Visible = IdentitiesPermisos.Usuarios_Eliminacion;
-            btnEdit.Visible = IdentitiesPermisos.Usuarios_Actualizacion;
+            int posicionX = 150;
+            int espacioEntreBotones = 50;
+
+            if (IdentitiesPermisos.Usuarios_Escritura)
+            {
+                btnAdd.Visible = true;
+                btnAdd.Location = new Point(posicionX, btnAdd.Location.Y);
+                posicionX += btnAdd.Width + espacioEntreBotones;
+            }
+            else
+            {
+                btnAdd.Visible = false;
+            }
+
+            if (IdentitiesPermisos.Usuarios_Actualizacion)
+            {
+                btnEdit.Visible = true;
+                btnEdit.Location = new Point(posicionX, btnEdit.Location.Y);
+                posicionX += btnEdit.Width + espacioEntreBotones;
+            }
+            else
+            {
+                btnEdit.Visible = false;
+            }
+
+            if (IdentitiesPermisos.Usuarios_Eliminacion)
+            {
+                btnDel.Visible = true;
+                btnDel.Location = new Point(posicionX, btnDel.Location.Y);
+            }
+            else
+            {
+                btnDel.Visible = false;
+            }
         }
     }
 }
