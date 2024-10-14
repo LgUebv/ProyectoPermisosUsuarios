@@ -88,7 +88,7 @@ namespace Controller
                 return; 
             }
 
-            string queryBorrarPermisos = $"call p_EliminarPermisosPorUsuario('{Username.Text}');"; 
+            string queryBorrarPermisos = $"call p_BorrarPermisos('{Username.Text}');"; 
             f.Guardar(queryBorrarPermisos); 
 
             foreach (DataGridViewRow row in permisos.Rows)
@@ -119,6 +119,36 @@ namespace Controller
             tabla.DataSource = f.Mostrar($"select * from usuarios where nombre like '%{filtro}%'", "Usuarios").Tables[0];
             tabla.AutoResizeColumns();
             tabla.AutoResizeRows();
+        }
+
+        public List<Permiso> ObtenerPermisos(string username)
+        {
+            List<Permiso> permisos = new List<Permiso>();
+            DataSet ds = f.Mostrar($"call p_ObtenerPermisos('{username}')", "Permisos");
+            DataTable dt = ds.Tables[0];
+
+            foreach (DataRow row in dt.Rows)
+            {
+                permisos.Add(new Permiso
+                {
+                    Formulario = row["NombreFormulario"].ToString(),
+                    Lectura = Convert.ToBoolean(row["FrmLectura"]),
+                    Escritura = Convert.ToBoolean(row["FrmEscritura"]),
+                    Actualizacion = Convert.ToBoolean(row["FrmActualizacion"]),
+                    Eliminacion = Convert.ToBoolean(row["FrmEliminacion"])
+                });
+            }
+
+            return permisos;
+        }
+
+        public class Permiso
+        {
+            public string Formulario { get; set; }
+            public bool Lectura { get; set; }
+            public bool Escritura { get; set; }
+            public bool Actualizacion { get; set; }
+            public bool Eliminacion { get; set; }
         }
     }
 }

@@ -88,7 +88,7 @@ namespace ProyectoPermisosUsuarios
             }
             else
             {
-                MessageBox.Show("Por favor selecciona un usuario para modificar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Por favor selecciona un herramienta para modificar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void VerificarPermisos()

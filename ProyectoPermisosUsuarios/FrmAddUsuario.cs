@@ -65,6 +65,17 @@ namespace ProyectoPermisosUsuarios
             txtApellidoM.Text = apellidoM;
             dtpFechaNac.Value = DateTime.Parse(fechaNacimiento);
             txtRFC.Text = rfc;
+
+            // Obtener permisos del usuario y llenarlos en el DataGridView
+            var permisos = Cu.ObtenerPermisos(username);
+            dtgvPermisos.Rows.Clear();
+
+            foreach (var permiso in permisos)
+            {
+                dtgvPermisos.Rows.Add(permiso.Formulario, permiso.Lectura, permiso.Escritura, permiso.Actualizacion, permiso.Eliminacion);
+            }
+
+            dtgvPermisos.AutoResizeColumns();
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
