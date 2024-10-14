@@ -46,6 +46,7 @@
             this.btnDel.TabIndex = 37;
             this.btnDel.Text = "ELIMINAR";
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnEdit
             // 
@@ -56,6 +57,7 @@
             this.btnEdit.TabIndex = 36;
             this.btnEdit.Text = "MODIFICAR";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -66,6 +68,7 @@
             this.btnAdd.TabIndex = 35;
             this.btnAdd.Text = "AGREGAR";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dtgvUsuarios
             // 
@@ -77,6 +80,7 @@
             this.dtgvUsuarios.RowTemplate.Height = 24;
             this.dtgvUsuarios.Size = new System.Drawing.Size(665, 336);
             this.dtgvUsuarios.TabIndex = 34;
+            this.dtgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvUsuarios_CellClick);
             // 
             // txtBuscarUsuario
             // 
@@ -85,6 +89,7 @@
             this.txtBuscarUsuario.Name = "txtBuscarUsuario";
             this.txtBuscarUsuario.Size = new System.Drawing.Size(667, 20);
             this.txtBuscarUsuario.TabIndex = 33;
+            this.txtBuscarUsuario.TextChanged += new System.EventHandler(this.txtBuscarUsuario_TextChanged);
             // 
             // label1
             // 

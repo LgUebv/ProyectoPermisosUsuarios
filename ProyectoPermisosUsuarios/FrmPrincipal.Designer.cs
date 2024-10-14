@@ -61,6 +61,7 @@
             this.tsUsuario.Name = "tsUsuario";
             this.tsUsuario.Size = new System.Drawing.Size(62, 22);
             this.tsUsuario.Text = "USUARIOS";
+            this.tsUsuario.Click += new System.EventHandler(this.tsUsuario_Click);
             // 
             // toolStripSeparator1
             // 
@@ -72,6 +73,7 @@
             this.tsRefacciones.Name = "tsRefacciones";
             this.tsRefacciones.Size = new System.Drawing.Size(82, 22);
             this.tsRefacciones.Text = "REFACCIONES";
+            this.tsRefacciones.Click += new System.EventHandler(this.tsRefacciones_Click);
             // 
             // toolStripSeparator2
             // 
@@ -83,6 +85,7 @@
             this.tsTaller.Name = "tsTaller";
             this.tsTaller.Size = new System.Drawing.Size(45, 22);
             this.tsTaller.Text = "TALLER";
+            this.tsTaller.Click += new System.EventHandler(this.tsTaller_Click);
             // 
             // toolStripSeparator3
             // 
@@ -94,6 +97,7 @@
             this.tsSalir.Name = "tsSalir";
             this.tsSalir.Size = new System.Drawing.Size(37, 22);
             this.tsSalir.Text = "SALIR";
+            this.tsSalir.Click += new System.EventHandler(this.tsSalir_Click);
             // 
             // FrmPrincipal
             // 

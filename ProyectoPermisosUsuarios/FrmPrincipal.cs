@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Identities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,40 @@ namespace ProyectoPermisosUsuarios
         public FrmPrincipal()
         {
             InitializeComponent();
+            VerificarPermisos();
+        }
+
+        private void tsUsuario_Click(object sender, EventArgs e)
+        {
+            FrmUsuarios fu = new FrmUsuarios();
+            fu.MdiParent = this;
+            fu.Show();
+        }
+
+        private void tsRefacciones_Click(object sender, EventArgs e)
+        {
+            FrmProducto fp = new FrmProducto();
+            fp.MdiParent = this;
+            fp.Show();
+        }
+
+        private void tsTaller_Click(object sender, EventArgs e)
+        {
+            FrmHerramientas fh = new FrmHerramientas();
+            fh.MdiParent = this;
+            fh.Show();
+        }
+
+        private void tsSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        public void VerificarPermisos()
+        {
+            tsUsuario.Visible = IdentitiesPermisos.Usuarios_Lectura;
+            tsRefacciones.Visible = IdentitiesPermisos.Producto_Lectura;
+            tsTaller.Visible = IdentitiesPermisos.Herramientas_Lectura;
         }
     }
 }

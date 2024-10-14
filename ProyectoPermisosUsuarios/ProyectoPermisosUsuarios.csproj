@@ -151,6 +151,10 @@
       <Project>{0c40f00a-2082-495d-9c9f-89ca851aa695}</Project>
       <Name>Controller</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Identities\Identities.csproj">
+      <Project>{5588b688-4100-41a8-8246-6b0ac105850d}</Project>
+      <Name>Identities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
