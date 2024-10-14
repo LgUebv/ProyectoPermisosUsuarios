@@ -64,6 +64,11 @@ namespace ProyectoPermisosUsuarios
             ch.Mostrar(dtgvHerramientas, txtBuscarHerramienta.Text);
         }
 
+        private void lblExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         public FrmHerramientas()
         {
             InitializeComponent();

@@ -24,6 +24,11 @@ namespace ProyectoPermisosUsuarios
             Cu = new ControllerUser();
         }
 
+        private void lblExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void txtBuscarUsuario_TextChanged(object sender, EventArgs e)
         {
             Cu.MostrarGeneral(dtgvUsuarios, txtBuscarUsuario.Text);

@@ -76,6 +76,11 @@ namespace ProyectoPermisosUsuarios
             far.Show();
         }
 
+        private void lblExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         public FrmProducto()
         {
             InitializeComponent();
