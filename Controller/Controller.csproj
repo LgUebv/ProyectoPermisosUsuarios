@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,6 +45,7 @@
   <ItemGroup>
     <Compile Include="ControllerHerramientas.cs" />
     <Compile Include="ControllerLogin.cs" />
+    <Compile Include="ControllerRefaccion.cs" />
     <Compile Include="ControllerUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
