@@ -28,7 +28,7 @@ namespace ProyectoPermisosUsuarios
                 marca = dtgvProductos.Rows[fila].Cells[2].Value.ToString();
                 descripcion = dtgvProductos.Rows[fila].Cells[3].Value.ToString();*/
                 FrmAddRefacciones formulario = new FrmAddRefacciones();
-                formulario.SetData(codigoBarras, nombre, marca, descripcion); // Método que debes crear en el formulario
+                formulario.SetData(codigoBarras, nombre, marca, descripcion);
                 formulario.ShowDialog();
             }
             else
@@ -41,10 +41,8 @@ namespace ProyectoPermisosUsuarios
         {
             if (dtgvProductos.SelectedRows.Count > 0)
             {
-                // Obtén el username de la fila seleccionada (ajusta el índice según tu DataGridView)
                 codigoBarras = int.Parse(dtgvProductos.SelectedRows[0].Cells["codigoBarras"].Value.ToString());
 
-                // Llama al método Borrar del manejador
                 cr.Borrar(codigoBarras);
             }
             else
@@ -55,18 +53,16 @@ namespace ProyectoPermisosUsuarios
 
         private void dtgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // Asegúrate de que la fila es válida
+            if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dtgvProductos.Rows[e.RowIndex];
 
-                // Almacena los datos de la fila seleccionada en las variables
-                codigoBarras = int.Parse(row.Cells["CodigoBarras"].Value.ToString()); // Asegúrate de que este valor sea seguro
+                codigoBarras = int.Parse(row.Cells["CodigoBarras"].Value.ToString());
                 nombre = row.Cells["nombre"].Value.ToString();
                 descripcion = row.Cells["descripcion"].Value.ToString();
                 marca = row.Cells["marca"].Value.ToString();
 
-                // Cambia el color de la fila seleccionada (opcional)
-                row.Selected = true; // Esto selecciona la fila visualmente
+                row.Selected = true;
             }
         }
 
@@ -74,6 +70,11 @@ namespace ProyectoPermisosUsuarios
         {
             FrmAddRefacciones far = new FrmAddRefacciones();
             far.Show();
+        }
+
+        private void lblExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         public FrmProducto()
@@ -88,18 +89,39 @@ namespace ProyectoPermisosUsuarios
         }
         private void VerificarPermisos()
         {
-            if (!IdentitiesPermisos.Producto_Escritura)
+            int posicionX = 150;
+            int espacioEntreBotones = 50;
+
+            if (IdentitiesPermisos.Producto_Escritura)
+            {
+                btnAdd.Visible = true;
+                btnAdd.Location = new Point(posicionX, btnAdd.Location.Y);
+                posicionX += btnAdd.Width + espacioEntreBotones;
+            }
+            else
             {
                 btnAdd.Visible = false;
-                //falta lo de las posiciones de botones
             }
 
-            btnEditar.Visible = IdentitiesPermisos.Producto_Actualizacion;
+            if (IdentitiesPermisos.Producto_Actualizacion)
+            {
+                btnEditar.Visible = true;
+                btnEditar.Location = new Point(posicionX, btnEditar.Location.Y);
+                posicionX += btnEditar.Width + espacioEntreBotones;
+            }
+            else
+            {
+                btnEditar.Visible = false;
+            }
 
-            if (!IdentitiesPermisos.Producto_Eliminacion)
+            if (IdentitiesPermisos.Producto_Eliminacion)
+            {
+                btnDel.Visible = true;
+                btnDel.Location = new Point(posicionX, btnDel.Location.Y);
+            }
+            else
             {
                 btnDel.Visible = false;
-                //falta lo de las posiciones de botones
             }
         }
     }

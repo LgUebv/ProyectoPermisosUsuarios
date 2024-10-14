@@ -26,7 +26,6 @@ namespace ProyectoPermisosUsuarios
             {
                 codigoHerramienta = int.Parse(dtgvHerramientas.SelectedRows[0].Cells["codigoHerramienta"].Value.ToString());
 
-                // Llama al método Borrar del manejador
                 ch.Borrar(codigoHerramienta);
             }
             else
@@ -37,19 +36,17 @@ namespace ProyectoPermisosUsuarios
 
         private void dtgvHerramientas_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // Asegúrate de que la fila es válida
+            if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dtgvHerramientas.Rows[e.RowIndex];
 
-                // Almacena los datos de la fila seleccionada en las variables
-                codigoHerramienta = int.Parse(row.Cells["codigoHerramienta"].Value.ToString()); // Asegúrate de que este valor sea seguro
+                codigoHerramienta = int.Parse(row.Cells["codigoHerramienta"].Value.ToString());
                 nombre = row.Cells["nombre"].Value.ToString();
                 medida = double.Parse(row.Cells["medida"].Value.ToString());
                 marca = row.Cells["marca"].Value.ToString();
                 descripcion = row.Cells["descripcion"].Value.ToString();
 
-                // Cambia el color de la fila seleccionada (opcional)
-                row.Selected = true; // Esto selecciona la fila visualmente
+                row.Selected = true;
             }
         }
 
@@ -62,6 +59,11 @@ namespace ProyectoPermisosUsuarios
         private void txtBuscarHerramienta_TextChanged(object sender, EventArgs e)
         {
             ch.Mostrar(dtgvHerramientas, txtBuscarHerramienta.Text);
+        }
+
+        private void lblExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         public FrmHerramientas()
@@ -81,7 +83,7 @@ namespace ProyectoPermisosUsuarios
                 marca = dtgvHerramientas.Rows[fila].Cells[3].Value.ToString();
                 descripcion = dtgvHerramientas.Rows[fila].Cells[4].Value.ToString();*/
                 FrmAddHerramientas formulario = new FrmAddHerramientas();
-                formulario.SetData(codigoHerramienta, nombre, medida, marca, descripcion); // Método que debes crear en el formulario
+                formulario.SetData(codigoHerramienta, nombre, medida, marca, descripcion);
                 formulario.ShowDialog();
             }
             else
@@ -91,18 +93,39 @@ namespace ProyectoPermisosUsuarios
         }
         private void VerificarPermisos()
         {
-            if (!IdentitiesPermisos.Herramientas_Escritura)
+            int posicionX = 150; 
+            int espacioEntreBotones = 50;
+
+            if (IdentitiesPermisos.Herramientas_Escritura)
+            {
+                btnAdd.Visible = true;
+                btnAdd.Location = new Point(posicionX, btnAdd.Location.Y);
+                posicionX += btnAdd.Width + espacioEntreBotones;
+            }
+            else
             {
                 btnAdd.Visible = false;
-                //falta lo de las posiciones de botones
             }
 
-            btnEditar.Visible = IdentitiesPermisos.Herramientas_Actualizacion;
+            if (IdentitiesPermisos.Herramientas_Actualizacion)
+            {
+                btnEditar.Visible = true;
+                btnEditar.Location = new Point(posicionX, btnEditar.Location.Y);
+                posicionX += btnEditar.Width + espacioEntreBotones;
+            }
+            else
+            {
+                btnEditar.Visible = false;
+            }
 
-            if (!IdentitiesPermisos.Herramientas_Eliminacion)
+            if (IdentitiesPermisos.Herramientas_Eliminacion)
+            {
+                btnDel.Visible = true;
+                btnDel.Location = new Point(posicionX, btnDel.Location.Y);
+            }
+            else
             {
                 btnDel.Visible = false;
-                //falta lo de las posiciones de botones
             }
         }
     }

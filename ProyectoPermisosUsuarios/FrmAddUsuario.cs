@@ -24,20 +24,17 @@ namespace ProyectoPermisosUsuarios
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            // Verifica si el username está vacío
             if (string.IsNullOrEmpty(FrmUsuarios.username))
             {
-                // Si no hay username, se guarda un nuevo usuario
                 Cu.Guardar(txtUsername, txtPassword, txtNombre, txtApellidoP, txtApellidoM, dtpFechaNac, txtRFC, dtgvPermisos);
                 MessageBox.Show("Usuario agregado exitosamente.");
             }
             else
             {
-                // Si hay username, se modifica el usuario existente
                 Cu.Modificar(txtUsername, txtPassword, txtNombre, txtApellidoP, txtApellidoM, dtpFechaNac, txtRFC, dtgvPermisos);
                 MessageBox.Show("Usuario modificado exitosamente.");
             }
-            Close(); // Cierra el formulario después de guardar o modificar
+            Close(); 
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -47,25 +44,21 @@ namespace ProyectoPermisosUsuarios
 
         private void CargarPermisos()
         {
-            // Limpiar cualquier contenido previo
             dtgvPermisos.Rows.Clear();
 
-            // Nombres de los formularios
-            string[] formularios = { "Usuarios", "Herramientas", "Productos" }; // Agrega más formularios en caso que se creen mas (obligatorio)
+            string[] formularios = { "Usuarios", "Herramientas", "Productos" }; 
 
-            // Recorrer los formularios y añadir filas con columnas para los permisos
             foreach (string formulario in formularios)
             {
                 dtgvPermisos.Rows.Add(formulario, false, false, false, false);
             }
 
-            // Ajustar columnas para que se vean bien
             dtgvPermisos.AutoResizeColumns();
         }
 
         public void SetData(string username, string password, string nombre, string apellidoP, string apellidoM, string fechaNacimiento, string rfc)
         {
-            txtUsername.Text = username; // Asigna los valores a los controles
+            txtUsername.Text = username;
             txtPassword.Text = password;
             txtNombre.Text = nombre;
             txtApellidoP.Text = apellidoP;

@@ -52,50 +52,55 @@
             this.tsSalir});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(917, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(917, 28);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // tsUsuario
             // 
+            this.tsUsuario.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsUsuario.Name = "tsUsuario";
-            this.tsUsuario.Size = new System.Drawing.Size(62, 22);
+            this.tsUsuario.Size = new System.Drawing.Size(114, 25);
             this.tsUsuario.Text = "USUARIOS";
             this.tsUsuario.Click += new System.EventHandler(this.tsUsuario_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
             // 
             // tsRefacciones
             // 
+            this.tsRefacciones.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsRefacciones.Name = "tsRefacciones";
-            this.tsRefacciones.Size = new System.Drawing.Size(82, 22);
+            this.tsRefacciones.Size = new System.Drawing.Size(155, 25);
             this.tsRefacciones.Text = "REFACCIONES";
             this.tsRefacciones.Click += new System.EventHandler(this.tsRefacciones_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 28);
             // 
             // tsTaller
             // 
+            this.tsTaller.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tsTaller.Name = "tsTaller";
-            this.tsTaller.Size = new System.Drawing.Size(45, 22);
+            this.tsTaller.Size = new System.Drawing.Size(78, 25);
             this.tsTaller.Text = "TALLER";
             this.tsTaller.Click += new System.EventHandler(this.tsTaller_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 28);
             // 
             // tsSalir
             // 
+            this.tsSalir.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsSalir.ForeColor = System.Drawing.Color.Red;
             this.tsSalir.Name = "tsSalir";
-            this.tsSalir.Size = new System.Drawing.Size(37, 22);
+            this.tsSalir.Size = new System.Drawing.Size(66, 25);
             this.tsSalir.Text = "SALIR";
             this.tsSalir.Click += new System.EventHandler(this.tsSalir_Click);
             // 
@@ -105,9 +110,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 518);
             this.Controls.Add(this.toolStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.IsMdiContainer = true;
             this.Name = "FrmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPrincipal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
