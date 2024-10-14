@@ -7,6 +7,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Controller
 {
@@ -17,30 +18,40 @@ namespace Controller
         public string[] Validar(string _user, string _pass)
         {
             string[] resultado = new string[2];
-            DataSet r = f.Mostrar($"call p_validar('{_user}', '{Sha1(_pass)}')", "Usuarios");
-            DataTable dt = r.Tables[0];
 
-            if (dt.Rows.Count > 0)
+            try
             {
-                resultado[0] = "Correcto";
-                resultado[1] = dt.Rows[0]["Username"].ToString();
+                DataSet r = f.Mostrar($"call p_validar('{_user}', '{Sha1(_pass)}')", "Usuarios");
+                DataTable dt = r.Tables[0];
 
-                IdentitiesPermisos.LimpiarPermisos();
-
-                foreach (DataRow row in dt.Rows)
+                if (dt.Rows.Count > 0)
                 {
-                    string formulario = row["NombreFormulario"].ToString();
-                    IdentitiesPermisos.AsignarPermisos(formulario,
-                        Convert.ToBoolean(row["FrmLectura"]),
-                        Convert.ToBoolean(row["FrmEscritura"]),
-                        Convert.ToBoolean(row["FrmActualizacion"]),
-                        Convert.ToBoolean(row["FrmEliminacion"]));
+                    resultado[0] = "Correcto";
+                    resultado[1] = dt.Rows[0]["Username"].ToString(); // Obtiene el nombre de usuario
+
+                    IdentitiesPermisos.LimpiarPermisos(); // Limpia permisos anteriores
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        string formulario = row["NombreFormulario"].ToString();
+                        IdentitiesPermisos.AsignarPermisos(formulario,
+                            Convert.ToBoolean(row["FrmLectura"]),
+                            Convert.ToBoolean(row["FrmEscritura"]),
+                            Convert.ToBoolean(row["FrmActualizacion"]),
+                            Convert.ToBoolean(row["FrmEliminacion"]));
+                    }
+                }
+                else
+                {
+                    resultado[0] = "Incorrecto";
+                    resultado[1] = string.Empty; // Sin nombre de usuario
                 }
             }
-            else
+            catch (Exception ex)
             {
+                // Aquí puedes manejar la excepción de forma que no cierre la aplicación
                 resultado[0] = "Incorrecto";
-                resultado[1] = string.Empty;
+                resultado[1] = string.Empty; // Sin nombre de usuario
             }
 
             return resultado;

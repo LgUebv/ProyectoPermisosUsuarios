@@ -90,41 +90,9 @@ namespace ProyectoPermisosUsuarios
         }
         private void VerificarPermisos()
         {
-            int posicionX = 150;
-            int espacioEntreBotones = 50;
-
-            if (IdentitiesPermisos.Producto_Escritura)
-            {
-                posicionX = 30;
-                btnAdd.Visible = true;
-                btnAdd.Location = new Point(posicionX, btnAdd.Location.Y);
-                posicionX += btnAdd.Width + espacioEntreBotones;
-            }
-            else
-            {
-                btnAdd.Visible = false;
-            }
-
-            if (IdentitiesPermisos.Producto_Actualizacion)
-            {
-                btnEditar.Visible = true;
-                btnEditar.Location = new Point(posicionX, btnEditar.Location.Y);
-                posicionX += btnEditar.Width + espacioEntreBotones;
-            }
-            else
-            {
-                btnEditar.Visible = false;
-            }
-
-            if (IdentitiesPermisos.Producto_Eliminacion)
-            {
-                btnDel.Visible = true;
-                btnDel.Location = new Point(posicionX, btnDel.Location.Y);
-            }
-            else
-            {
-                btnDel.Visible = false;
-            }
+            btnAdd.Visible = IdentitiesPermisos.Producto_Escritura;
+            btnEditar.Visible = IdentitiesPermisos.Producto_Actualizacion;
+            btnDel.Visible = IdentitiesPermisos.Producto_Eliminacion;
         }
     }
 }
