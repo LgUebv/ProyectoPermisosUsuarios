@@ -14,7 +14,7 @@ namespace Controller
         Funciones f = new Funciones();
         public void Guardar(TextBox codigoHerramienta, TextBox nombre, TextBox medida, TextBox marca, TextBox descripcion)
         {
-            MessageBox.Show(f.Guardar($"insert into Taller (codigoHerramienta, nombre, medida, marca, descripcion) values ({codigoHerramienta.Text}, '{nombre.Text}', '{medida.Text}', '{marca.Text}', '{descripcion.Text}')"),
+            MessageBox.Show(f.Guardar($"CALL p_InsertarTaller({codigoHerramienta.Text}, '{nombre.Text}', '{medida.Text}', '{marca.Text}', '{descripcion.Text}')"),
                 "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         public void Borrar(int ID)
@@ -23,13 +23,13 @@ namespace Controller
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
             {
-                f.Borrar($"delete from Taller where codigoHerramienta ={ID}");
+                f.Borrar($"CALL p_EliminarTaller({ID})");
                 MessageBox.Show("Registro eliminado con exito", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         public void Modificar(TextBox codigoHerramienta, TextBox nombre, TextBox medida, TextBox marca, TextBox descripcion)
         {
-            MessageBox.Show(f.Modificar($"update Taller set nombre = '{nombre.Text}', medida = '{medida.Text}', marca = '{marca.Text}', descripcion = '{descripcion.Text}' where codigoHerramienta = {codigoHerramienta.Text}"),
+            MessageBox.Show(f.Modificar($"CALL p_ModificarTaller('{nombre.Text}', medida = '{medida.Text}', marca = '{marca.Text}', descripcion = '{descripcion.Text}')"),
                 "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
