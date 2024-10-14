@@ -93,6 +93,7 @@ namespace ProyectoPermisosUsuarios
 
             if (IdentitiesPermisos.Usuarios_Escritura)
             {
+                posicionX = 30;
                 btnAdd.Visible = true;
                 btnAdd.Location = new Point(posicionX, btnAdd.Location.Y);
                 posicionX += btnAdd.Width + espacioEntreBotones;
