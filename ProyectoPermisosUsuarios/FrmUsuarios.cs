@@ -86,7 +86,7 @@ namespace ProyectoPermisosUsuarios
             }
         }
 
-        public void VerificarPermisos()
+        private void VerificarPermisos()
         {
             int posicionX = 150;
             int espacioEntreBotones = 50;

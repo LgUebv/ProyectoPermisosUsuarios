@@ -43,10 +43,10 @@
             this.btnDel.BackColor = System.Drawing.Color.Tomato;
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDel.Location = new System.Drawing.Point(490, 355);
-            this.btnDel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDel.Location = new System.Drawing.Point(653, 437);
+            this.btnDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(169, 42);
+            this.btnDel.Size = new System.Drawing.Size(225, 52);
             this.btnDel.TabIndex = 37;
             this.btnDel.Text = "ELIMINAR";
             this.btnDel.UseVisualStyleBackColor = false;
@@ -57,10 +57,10 @@
             this.btnEdit.BackColor = System.Drawing.Color.GreenYellow;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.btnEdit.Location = new System.Drawing.Point(265, 355);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEdit.Location = new System.Drawing.Point(353, 437);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(169, 42);
+            this.btnEdit.Size = new System.Drawing.Size(225, 52);
             this.btnEdit.TabIndex = 36;
             this.btnEdit.Text = "MODIFICAR";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -71,10 +71,10 @@
             this.btnAdd.BackColor = System.Drawing.Color.Gold;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAdd.Location = new System.Drawing.Point(24, 355);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Location = new System.Drawing.Point(32, 437);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(169, 42);
+            this.btnAdd.Size = new System.Drawing.Size(225, 52);
             this.btnAdd.TabIndex = 35;
             this.btnAdd.Text = "AGREGAR";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -82,13 +82,15 @@
             // 
             // dtgvUsuarios
             // 
+            this.dtgvUsuarios.AllowUserToAddRows = false;
             this.dtgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvUsuarios.Location = new System.Drawing.Point(11, 73);
-            this.dtgvUsuarios.Margin = new System.Windows.Forms.Padding(2);
+            this.dtgvUsuarios.Location = new System.Drawing.Point(15, 90);
+            this.dtgvUsuarios.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgvUsuarios.Name = "dtgvUsuarios";
+            this.dtgvUsuarios.ReadOnly = true;
             this.dtgvUsuarios.RowHeadersWidth = 51;
             this.dtgvUsuarios.RowTemplate.Height = 24;
-            this.dtgvUsuarios.Size = new System.Drawing.Size(665, 270);
+            this.dtgvUsuarios.Size = new System.Drawing.Size(887, 332);
             this.dtgvUsuarios.TabIndex = 34;
             this.dtgvUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvUsuarios_CellClick);
             // 
@@ -96,10 +98,10 @@
             // 
             this.txtBuscarUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBuscarUsuario.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.txtBuscarUsuario.Location = new System.Drawing.Point(11, 42);
-            this.txtBuscarUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscarUsuario.Location = new System.Drawing.Point(15, 52);
+            this.txtBuscarUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBuscarUsuario.Name = "txtBuscarUsuario";
-            this.txtBuscarUsuario.Size = new System.Drawing.Size(665, 27);
+            this.txtBuscarUsuario.Size = new System.Drawing.Size(886, 32);
             this.txtBuscarUsuario.TabIndex = 33;
             this.txtBuscarUsuario.TextChanged += new System.EventHandler(this.txtBuscarUsuario_TextChanged);
             // 
@@ -107,10 +109,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(6, 6);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(8, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 28);
+            this.label1.Size = new System.Drawing.Size(281, 37);
             this.label1.TabIndex = 32;
             this.label1.Text = "BUSCAR USUARIOS";
             // 
@@ -119,18 +120,19 @@
             this.lblExit.AutoSize = true;
             this.lblExit.Font = new System.Drawing.Font("MS Reference Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExit.ForeColor = System.Drawing.Color.Red;
-            this.lblExit.Location = new System.Drawing.Point(654, -1);
+            this.lblExit.Location = new System.Drawing.Point(872, -1);
+            this.lblExit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblExit.Name = "lblExit";
-            this.lblExit.Size = new System.Drawing.Size(31, 34);
+            this.lblExit.Size = new System.Drawing.Size(38, 42);
             this.lblExit.TabIndex = 38;
             this.lblExit.Text = "x";
             this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
             // 
             // FrmUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 410);
+            this.ClientSize = new System.Drawing.Size(915, 505);
             this.Controls.Add(this.lblExit);
             this.Controls.Add(this.btnDel);
             this.Controls.Add(this.btnEdit);
@@ -139,6 +141,7 @@
             this.Controls.Add(this.txtBuscarUsuario);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

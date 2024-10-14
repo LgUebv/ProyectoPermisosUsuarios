@@ -28,7 +28,7 @@ namespace ProyectoPermisosUsuarios
                 marca = dtgvProductos.Rows[fila].Cells[2].Value.ToString();
                 descripcion = dtgvProductos.Rows[fila].Cells[3].Value.ToString();*/
                 FrmAddRefacciones formulario = new FrmAddRefacciones();
-                formulario.SetData(codigoBarras, nombre, marca, descripcion);
+                formulario.SetData(codigoBarras, nombre, descripcion, marca);
                 formulario.ShowDialog();
             }
             else
@@ -81,6 +81,7 @@ namespace ProyectoPermisosUsuarios
         {
             InitializeComponent();
             cr = new ControllerRefaccion();
+            VerificarPermisos();
         }
 
         private void txtBuscarProducto_TextChanged(object sender, EventArgs e)

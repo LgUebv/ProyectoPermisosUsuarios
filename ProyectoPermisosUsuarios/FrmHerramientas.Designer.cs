@@ -43,10 +43,10 @@
             this.btnDel.BackColor = System.Drawing.Color.Tomato;
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDel.Location = new System.Drawing.Point(498, 361);
-            this.btnDel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDel.Location = new System.Drawing.Point(664, 444);
+            this.btnDel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(149, 38);
+            this.btnDel.Size = new System.Drawing.Size(199, 47);
             this.btnDel.TabIndex = 30;
             this.btnDel.Text = "ELIMINAR";
             this.btnDel.UseVisualStyleBackColor = false;
@@ -57,10 +57,10 @@
             this.btnEditar.BackColor = System.Drawing.Color.GreenYellow;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.btnEditar.Location = new System.Drawing.Point(265, 361);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditar.Location = new System.Drawing.Point(353, 444);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(149, 38);
+            this.btnEditar.Size = new System.Drawing.Size(199, 47);
             this.btnEditar.TabIndex = 29;
             this.btnEditar.Text = "MODIFICAR";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -71,10 +71,10 @@
             this.btnAdd.BackColor = System.Drawing.Color.Gold;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAdd.Location = new System.Drawing.Point(36, 361);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Location = new System.Drawing.Point(48, 444);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(149, 38);
+            this.btnAdd.Size = new System.Drawing.Size(199, 47);
             this.btnAdd.TabIndex = 28;
             this.btnAdd.Text = "AGREGAR";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -82,13 +82,15 @@
             // 
             // dtgvHerramientas
             // 
+            this.dtgvHerramientas.AllowUserToAddRows = false;
             this.dtgvHerramientas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvHerramientas.Location = new System.Drawing.Point(11, 74);
-            this.dtgvHerramientas.Margin = new System.Windows.Forms.Padding(2);
+            this.dtgvHerramientas.Location = new System.Drawing.Point(15, 91);
+            this.dtgvHerramientas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgvHerramientas.Name = "dtgvHerramientas";
+            this.dtgvHerramientas.ReadOnly = true;
             this.dtgvHerramientas.RowHeadersWidth = 51;
             this.dtgvHerramientas.RowTemplate.Height = 24;
-            this.dtgvHerramientas.Size = new System.Drawing.Size(665, 270);
+            this.dtgvHerramientas.Size = new System.Drawing.Size(887, 332);
             this.dtgvHerramientas.TabIndex = 27;
             this.dtgvHerramientas.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvHerramientas_CellEnter);
             // 
@@ -96,10 +98,10 @@
             // 
             this.txtBuscarHerramienta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBuscarHerramienta.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.txtBuscarHerramienta.Location = new System.Drawing.Point(11, 43);
-            this.txtBuscarHerramienta.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscarHerramienta.Location = new System.Drawing.Point(15, 53);
+            this.txtBuscarHerramienta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBuscarHerramienta.Name = "txtBuscarHerramienta";
-            this.txtBuscarHerramienta.Size = new System.Drawing.Size(665, 27);
+            this.txtBuscarHerramienta.Size = new System.Drawing.Size(886, 32);
             this.txtBuscarHerramienta.TabIndex = 26;
             this.txtBuscarHerramienta.TextChanged += new System.EventHandler(this.txtBuscarHerramienta_TextChanged);
             // 
@@ -107,10 +109,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(8, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(11, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(284, 28);
+            this.label1.Size = new System.Drawing.Size(355, 37);
             this.label1.TabIndex = 25;
             this.label1.Text = "BUSCAR HERRAMIENTAS";
             // 
@@ -119,18 +120,19 @@
             this.lblExit.AutoSize = true;
             this.lblExit.Font = new System.Drawing.Font("MS Reference Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExit.ForeColor = System.Drawing.Color.Red;
-            this.lblExit.Location = new System.Drawing.Point(652, -2);
+            this.lblExit.Location = new System.Drawing.Point(869, -2);
+            this.lblExit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblExit.Name = "lblExit";
-            this.lblExit.Size = new System.Drawing.Size(31, 34);
+            this.lblExit.Size = new System.Drawing.Size(38, 42);
             this.lblExit.TabIndex = 31;
             this.lblExit.Text = "x";
             this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
             // 
             // FrmHerramientas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 410);
+            this.ClientSize = new System.Drawing.Size(915, 505);
             this.Controls.Add(this.lblExit);
             this.Controls.Add(this.btnDel);
             this.Controls.Add(this.btnEditar);
@@ -139,6 +141,7 @@
             this.Controls.Add(this.txtBuscarHerramienta);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmHerramientas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmHerramientas";

@@ -66,5 +66,10 @@ namespace ProyectoPermisosUsuarios
             dtpFechaNac.Value = DateTime.Parse(fechaNacimiento);
             txtRFC.Text = rfc;
         }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
