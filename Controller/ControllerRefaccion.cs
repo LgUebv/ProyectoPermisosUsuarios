@@ -48,8 +48,6 @@ namespace Controller
         {
             tabla.Columns.Clear();
             tabla.DataSource = f.Mostrar($"select * from Refacciones where nombre like '%{filtro}%'", "Refacciones").Tables[0];
-            /*tabla.Columns.Insert(4, Boton("Borrar", Color.Red));
-            tabla.Columns.Insert(5, Boton("Editar", Color.Green));*/
             tabla.AutoResizeColumns();
             tabla.AutoResizeRows();
         }

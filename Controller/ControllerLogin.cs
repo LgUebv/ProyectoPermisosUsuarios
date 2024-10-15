@@ -27,9 +27,9 @@ namespace Controller
                 if (dt.Rows.Count > 0)
                 {
                     resultado[0] = "Correcto";
-                    resultado[1] = dt.Rows[0]["Username"].ToString(); // Obtiene el nombre de usuario
+                    resultado[1] = dt.Rows[0]["Username"].ToString();
 
-                    IdentitiesPermisos.LimpiarPermisos(); // Limpia permisos anteriores
+                    IdentitiesPermisos.LimpiarPermisos();
 
                     foreach (DataRow row in dt.Rows)
                     {
@@ -44,14 +44,13 @@ namespace Controller
                 else
                 {
                     resultado[0] = "Incorrecto";
-                    resultado[1] = string.Empty; // Sin nombre de usuario
+                    resultado[1] = string.Empty;
                 }
             }
             catch (Exception ex)
             {
-                // Aquí puedes manejar la excepción de forma que no cierre la aplicación
                 resultado[0] = "Incorrecto";
-                resultado[1] = string.Empty; // Sin nombre de usuario
+                resultado[1] = string.Empty;
             }
 
             return resultado;
